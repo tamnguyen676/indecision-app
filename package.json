@@ -4,8 +4,19 @@
   "main": "index.js",
   "author": "Tam Nguyen",
   "license": "MIT",
+  "scripts": {
+    "serve": "live-server public/",
+    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
+    "build": "webpack --watch"
+  },
   "dependencies": {
+    "babel": "^6.23.0",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1"
+    "babel-preset-react": "^6.24.1",
+    "cli": "^1.0.1",
+    "live-server": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
   }
 }
